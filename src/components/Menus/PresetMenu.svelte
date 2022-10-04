@@ -27,9 +27,9 @@
   const importPreset = () => {
     if (selected < 0) return;
     sectorList = [];
+    presetMenuOpen = false;
     setTimeout(() => {
       allPresets[selected].paramTitles.map((title) => addSector(title));
-      presetMenuOpen = false;
     }, 1200);
   };
 
