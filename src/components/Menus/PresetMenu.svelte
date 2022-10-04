@@ -116,6 +116,7 @@
     background: none;
     border: none;
     outline: none;
+    color: grey;
   }
   .container {
     position: fixed;
@@ -191,7 +192,6 @@
     padding: 0.5rem;
     border-radius: 50%;
     background: white;
-    color: grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -260,7 +260,7 @@
     transition: 0.3s;
   }
 
-  .importBtn:disabled {
+  button:disabled {
     opacity: 0;
   }
 </style>
