@@ -121,10 +121,6 @@
     background: var(--darkModeBg);
   }
 
-  :global(body p) {
-    color: black;
-  }
-
   :global(body.dark > *) {
     color: white;
   }

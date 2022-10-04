@@ -99,7 +99,7 @@
       >
     </div>
     <div class="page">
-      <h3>New preset</h3>
+      <h2>New preset</h2>
       <p>Save current options as a preset</p>
       <input type="text" placeholder="Title..." bind:value={newTitle} />
       <button on:click={addNewPreset} disabled={!newTitle}>Save</button>
@@ -145,7 +145,10 @@
 
   .menu.dark {
     background: var(--darkModeBg);
+    color: white !important;
+    text-align: center;
   }
+
 
   .offset {
     width: 0;
