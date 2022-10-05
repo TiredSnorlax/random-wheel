@@ -118,6 +118,18 @@
     outline: none;
     color: grey;
   }
+
+  input {
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem ;
+  }
+
+  input:focus {
+    border: 2px solid rgb(126, 126, 255);
+  }
+
   .container {
     position: fixed;
     inset: 0;

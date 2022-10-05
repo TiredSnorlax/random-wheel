@@ -15,13 +15,22 @@
 
   let darkMode = false;
 
+  const generateColor = () => {
+    const hue = Math.floor(Math.random() * 360);
+    const saturation = '60%';
+    const lightness = '60%';
+
+    return `hsl(${hue}, ${saturation}, ${lightness})`
+
+  };
+
   let sectorList: ISectorItem[] = [
     {
       params: {
         title: "first",
         angle: 180,
         rotation: 0,
-        color: "rgb(255, 0, 0)",
+        color: generateColor(),
       },
       id: 0,
     },
@@ -30,11 +39,12 @@
         title: "second",
         angle: 180,
         rotation: 180,
-        color: "rgb(0, 0, 255)",
+        color: generateColor(),
       },
       id: 1,
     },
   ];
+
   const calculateSectors = (_sectorList: ISectorItem[]) => {
     const newAngle = 360 / _sectorList.length;
     _sectorList.map((_, i) => {
@@ -55,7 +65,7 @@
           title: newOption,
           angle: 0,
           rotation: 0,
-          color: COLORS[sectorList.length % COLORS.length],
+          color: generateColor(),
         },
         id: sectorList.length + 1,
       },

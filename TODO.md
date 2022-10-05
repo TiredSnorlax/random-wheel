@@ -8,4 +8,3 @@
 - [x] Create options menu
 - [x] Create load presets menu
 - [x] Local storage
-- [ ] Firebase

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { flip } from "svelte/animate";
   import { scale } from "svelte/transition";
   import type { ISectorItem, ISectorParams } from "../../interfaces";
@@ -19,6 +20,13 @@
     newOptionList[0] = "";
     setTimeout(() => {}, animationDelay);
   };
+
+  const onKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Enter" && newOptionList[0]) {
+      addOption();
+    }
+  }
+
 </script>
 
 <div class="container">
@@ -29,7 +37,7 @@
         <div transition:scale animate:flip class="optionItem">
           <p>{sectorList.length + 1}.</p>
           <div>
-            <input type="text" bind:value={newOptionList[0]} />
+            <input type="text" bind:value={newOptionList[0]} on:keydown={onKeyDown} />
           </div>
         </div>
       {/each}
@@ -134,6 +142,8 @@
 
     background: rgb(220, 220, 220);
     border-radius: 1rem;
+
+    color: black;
   }
 
   .optionItem > div {

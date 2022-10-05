@@ -106,9 +106,10 @@
     text-shadow: 1px 1px 0 black;
     font-size: 1.2rem;
 
-    width: 100px;
+    width: 80px;
+    box-sizing: content-box;
     text-align: center;
-
+    padding-right: 1rem;
 
     overflow: hidden;
     text-overflow: ellipsis;
